@@ -1,25 +1,44 @@
+
+/* GENERAL SETTINGS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #222;
     background-color: white;
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
     color: black;
+    transition: color 0.3s ease;
 }
+
+a:hover {
+    color: gray;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* HEADER */
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 25px 45px;
     background-color: white;
 }
@@ -29,10 +48,15 @@ a {
     gap: 20px;
 }
 
+.left-menu a {
+    font-size: 13px;
+}
+
 .logo {
     font-size: 45px;
     letter-spacing: 8px;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .right-menu {
@@ -40,6 +64,8 @@ a {
     gap: 20px;
     font-size: 12px;
 }
+
+/* HERO SECTION */
 
 .hero {
     position: relative;
@@ -52,16 +78,18 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .hero-text {
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    width: 90%;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 .hero-text h2 {
@@ -80,21 +108,32 @@ a {
     background-color: white;
     color: black;
     font-size: 12px;
+    text-shadow: none;
+    transition: background-color 0.3s ease;
 }
+
+.shop-button:hover {
+    background-color: #dddddd;
+    color: black;
+}
+
+/* CATEGORIES */
 
 .categories {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
-
     padding: 35px 20px;
     font-size: 13px;
 }
 
+/* COLLECTION */
+
 .collection {
     padding: 50px 40px;
     text-align: center;
+    scroll-margin-top: 20px;
 }
 
 .collection h2 {
@@ -111,6 +150,7 @@ a {
 
 .product {
     flex: 1;
+    min-width: 0;
     text-align: left;
 }
 
@@ -118,6 +158,11 @@ a {
     width: 100%;
     height: 450px;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product img:hover {
+    transform: scale(1.02);
 }
 
 .product h3 {
@@ -130,6 +175,8 @@ a {
     margin-top: 8px;
     color: gray;
 }
+
+/* FOOTER */
 
 .footer {
     background-color: #f5f5f5;
@@ -155,16 +202,24 @@ a {
     color: gray;
 }
 
+/* TABLET AND MOBILE */
+
 @media (max-width: 768px) {
 
     .header {
         flex-direction: column;
         gap: 20px;
+        padding: 20px;
     }
 
+    .left-menu,
     .right-menu {
-        flex-wrap: wrap;
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 38px;
     }
 
     .hero {
@@ -175,13 +230,22 @@ a {
         font-size: 25px;
     }
 
+    .hero-text p {
+        font-size: 12px;
+    }
+
     .categories {
         flex-wrap: wrap;
         gap: 20px;
     }
 
+    .collection {
+        padding: 35px 20px;
+    }
+
     .product-container {
         flex-direction: column;
+        gap: 35px;
     }
 
     .product img {
@@ -192,5 +256,32 @@ a {
         flex-wrap: wrap;
         gap: 20px;
     }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-text h2 {
+        font-size: 21px;
+        letter-spacing: 3px;
+    }
+
+    .categories {
+        font-size: 11px;
+    }
+
+    .product img {
+        height: 320px;
+    }
+
+    .collection h2 {
+        font-size: 20px;
+    }
 
 }
+
