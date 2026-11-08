@@ -1,9 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZARA | New Collection</title>
+
+    <title>ZARA | New Collection - Spring/Summer 2026</title>
+
+    <meta name="description" content="Discover the latest ZARA fashion collection. Explore modern styles, minimal outfits, casual wear and new arrivals for Spring/Summer 2026.">
+
+    <meta name="keywords" content="ZARA, fashion, new collection, spring summer 2026, modern style, casual wear">
+
+    <meta name="author" content="Enerel">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href="https://enerel42.github.io/lab6/">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,34 +26,35 @@
 
     <header class="header">
 
-        <nav class="left-menu">
-            <a href="#">WOMAN</a>
-            <a href="#">MAN</a>
-            <a href="#">KIDS</a>
+        <nav class="left-menu" aria-label="Main navigation">
+            <a href="#collection">WOMAN</a>
+            <a href="#collection">MAN</a>
+            <a href="#collection">KIDS</a>
         </nav>
 
         <h1 class="logo">ZARA</h1>
 
         <div class="right-menu">
-            <a href="#">SEARCH</a>
-            <a href="#">LOG IN</a>
-            <a href="#">SHOPPING BAG</a>
+            <a href="#collection">SEARCH</a>
+            <a href="#contact">LOG IN</a>
+            <a href="#collection">SHOPPING BAG</a>
         </div>
 
     </header>
 
-
     <main>
 
-        <section class="hero">
+        <section class="hero" aria-label="New fashion collection">
 
             <img
                 src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1800"
-                alt="Zara fashion collection">
+                alt="Model wearing modern fashion from the new collection"
+                fetchpriority="high">
 
             <div class="hero-text">
                 <h2>NEW COLLECTION</h2>
                 <p>SPRING / SUMMER 2026</p>
+
                 <a href="#collection" class="shop-button">
                     VIEW COLLECTION
                 </a>
@@ -47,16 +62,14 @@
 
         </section>
 
-
-        <section class="categories">
+        <nav class="categories" aria-label="Product categories">
 
             <a href="#collection">WOMAN</a>
             <a href="#collection">MAN</a>
             <a href="#collection">NEW ARRIVALS</a>
             <a href="#collection">BEST SELLERS</a>
 
-        </section>
-
+        </nav>
 
         <section class="collection" id="collection">
 
@@ -64,34 +77,35 @@
 
             <div class="product-container">
 
-                <div class="product">
+                <article class="product">
                     <img
-                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700"
-                    alt="Fashion look 1">
+                        src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700"
+                        alt="Minimal style fashion outfit"
+                        loading="lazy">
 
                     <h3>MINIMAL STYLE</h3>
                     <p>NEW COLLECTION</p>
-                </div>
+                </article>
 
-
-                <div class="product">
+                <article class="product">
                     <img
-                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700"
-                    alt="Fashion look 2">
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700"
+                        alt="Casual wear fashion collection"
+                        loading="lazy">
 
                     <h3>CASUAL WEAR</h3>
                     <p>NEW COLLECTION</p>
-                </div>
+                </article>
 
-
-                <div class="product">
+                <article class="product">
                     <img
-                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700"
-                    alt="Fashion look 3">
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700"
+                        alt="Modern style clothing collection"
+                        loading="lazy">
 
                     <h3>MODERN STYLE</h3>
                     <p>NEW COLLECTION</p>
-                </div>
+                </article>
 
             </div>
 
@@ -99,20 +113,22 @@
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
 
         <h2>ZARA</h2>
 
-        <div class="footer-links">
-            <a href="#">ABOUT US</a>
-            <a href="#">CONTACT</a>
-            <a href="#">HELP</a>
-            <a href="#">INSTAGRAM</a>
-        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="#about">ABOUT US</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#contact">HELP</a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+        </nav>
 
         <p>© 2026 ZARA - FASHION COLLECTION</p>
 
     </footer>
 
 </body>
+</html>
+
 </html>
